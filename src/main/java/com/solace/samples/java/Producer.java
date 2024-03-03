@@ -122,10 +122,10 @@ public class Producer {
                 ;
                 try {
                     if (mode==2) {
-                        produce(aIPNoText.getText() + "-*-" + aIMsgText.getText());
+                        produce(aIPNoText.getText() + "   " + aIMsgText.getText());
                     }
                     else {
-                        produce(rPNameText.getText() + "-*-" + rPBSText.getText());
+                        produce(rPNameText.getText() + "   " + rPBSText.getText());
                     }
                 }
                 catch (Exception ep)

@@ -99,7 +99,9 @@ public class Consumer {
             final MessageHandler messageHandler = (inboundMessage) -> {
                 System.out.printf("vvv RECEIVED A MESSAGE vvv%n%s===%n",inboundMessage.dump());// just print
                 String a=msgArea.getText();
-                a=a+inboundMessage.dump();
+                String c=inboundMessage.getPayloadAsString();
+                c=c.substring(16,c.length()-1);
+                a=a+'\n'+c;
                 msgArea.setText(a);
             };
             receiver.receiveAsync(messageHandler);
