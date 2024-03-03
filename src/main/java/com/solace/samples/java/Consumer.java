@@ -44,7 +44,7 @@ public class Consumer {
 
     private JFrame mainFrame;
     private JLabel headerLabel;
-    public JTextArea msgArea;
+    public static JTextArea msgArea;
     
     private static final String SAMPLE_NAME = Consumer.class.getSimpleName();
     private static final String TOPIC_PREFIX = "solace/samples/";  // used as the topic "root"
@@ -64,7 +64,7 @@ public class Consumer {
             prepareGUI();
         }
 
-        public static void main(String[] args){
+        public static void main(String[] args)throws IOException{
             Consumer cons = new Consumer();
             cons.showEventDemo();
              /*if (args.length < 3) {  // Check command line arguments
